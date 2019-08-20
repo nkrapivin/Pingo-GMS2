@@ -575,14 +575,6 @@
             }
         },
         {
-            "Key": "55bb216d-b25a-4399-9a88-cbc71556a285",
-            "Value": {
-                "id": "ceac8c06-6e58-4daf-bd44-49d0ac68a478",
-                "resourcePath": "datafiles_yy\\custom_levels\\level002.txt.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "578620ac-b6a1-4e02-a7e2-bf10e9097184",
             "Value": {
                 "id": "be80a062-5d7e-4ad7-8415-e304d6609e3d",
@@ -627,14 +619,6 @@
             "Value": {
                 "id": "2ddb09db-5a44-4f25-8e88-0e3e21360ca4",
                 "resourcePath": "datafiles_yy\\levels\\World1\\level016.txt.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
-            "Key": "5e8a47bf-06a4-47aa-8fa1-c7616a96d031",
-            "Value": {
-                "id": "c7618147-f2bf-4a64-9944-7f715e7b7a4c",
-                "resourcePath": "datafiles_yy\\custom_levels\\level003.txt.yy",
                 "resourceType": "GMIncludedFile"
             }
         },

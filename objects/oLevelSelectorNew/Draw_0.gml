@@ -36,7 +36,13 @@ else
 			draw_set_color(c_black);
 		}
 	}
-	else draw_text(960/2,544/2,"No custom levels were found.");
+	else
+	{
+		if (!scrIsMobile())
+			draw_text(960/2,544/2,"No custom levels were found.");
+		else
+			draw_text(960/2,544/2,"Custom Levels aren't supported on mobile.\nSorry about that!\nJust click left trigger.");
+	}
 }
 
 //clickable triggers
@@ -57,7 +63,7 @@ var move = 0;
 move = keyboard_check_pressed(vk_right) - keyboard_check_pressed(vk_left);
 if (move != 0)
 {
-	selectedWorld += move;
+	selectedWorld = max(1,selectedWorld+move);
 	if (selectedWorld == 3)
 	{
 		instance_deactivate_object(oDoor);
