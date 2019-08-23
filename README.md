@@ -21,5 +21,3 @@ How to download and play the game: <br />
 Head over to game page on itch.io <br />
 https://nkrapivindev.itch.io/pingo-gms2 <br />
 Follow the Installation Instructions for the platform you want to play this game on. <br />
-
-PS: macOS version will be uploaded soon.
