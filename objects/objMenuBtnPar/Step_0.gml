@@ -1,5 +1,5 @@
 /// @description highlight
-if (point_in_rectangle(mouse_x,mouse_y,x,y,x+sprite_width,y+sprite_height))
+if (position_meeting(mouse_x,mouse_y,object_index))
 {
 	with (objMenuController)
 	{

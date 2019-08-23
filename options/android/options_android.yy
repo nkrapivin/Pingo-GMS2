@@ -33,12 +33,12 @@
     "option_android_icon_adaptivebg_xhdpi": "${options_dir}\\android\\icons_adaptivebg\\xhdpi.png",
     "option_android_icon_adaptivebg_xxhdpi": "${options_dir}\\android\\icons_adaptivebg\\xxhdpi.png",
     "option_android_icon_adaptivebg_xxxhdpi": "${options_dir}\\android\\icons_adaptivebg\\xxxhdpi.png",
-    "option_android_icon_hdpi": "${base_options_dir}\\android\\icons\\hdpi.png",
-    "option_android_icon_ldpi": "${base_options_dir}\\android\\icons\\ldpi.png",
-    "option_android_icon_mdpi": "${base_options_dir}\\android\\icons\\mdpi.png",
-    "option_android_icon_xhdpi": "${base_options_dir}\\android\\icons\\xhdpi.png",
-    "option_android_icon_xxhdpi": "${base_options_dir}\\android\\icons\\xxhdpi.png",
-    "option_android_icon_xxxhdpi": "${base_options_dir}\\android\\icons\\xxxhdpi.png",
+    "option_android_icon_hdpi": "${options_dir}\\android\\icons\\hdpi.png",
+    "option_android_icon_ldpi": "${options_dir}\\android\\icons\\ldpi.png",
+    "option_android_icon_mdpi": "${options_dir}\\android\\icons\\mdpi.png",
+    "option_android_icon_xhdpi": "${options_dir}\\android\\icons\\xhdpi.png",
+    "option_android_icon_xxhdpi": "${options_dir}\\android\\icons\\xxhdpi.png",
+    "option_android_icon_xxxhdpi": "${options_dir}\\android\\icons\\xxxhdpi.png",
     "option_android_install_location": 0,
     "option_android_interpolate_pixels": true,
     "option_android_lint": false,
@@ -73,7 +73,7 @@
     "option_android_version": {
         "build": 0,
         "major": 1,
-        "minor": 0,
+        "minor": 1,
         "revision": 0
     }
 }

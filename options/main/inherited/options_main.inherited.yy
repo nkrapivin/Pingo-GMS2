@@ -4,8 +4,9 @@
     },
     "option_gameguid": "98a93be7-d591-46a8-ab63-d178f3842e9a",
     "option_game_speed": 60,
-    "option_lastchanged": "19 August 2019 13:01:24",
-    "option_author": "Nikita Krapivin"
+    "option_lastchanged": "22 August 2019 19:59:18",
+    "option_author": "Nikita Krapivin",
+    "option_allow_game_statistics": false
 }←1225f6b0-ac20-43bd-a82e-be73fa0b6f4f|{
     "targets": 461609314234257646
 }←7fa50043-cea6-4cd0-9521-a8ba8c6ea9f0|{
