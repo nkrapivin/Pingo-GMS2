@@ -1,5 +1,5 @@
 /// @description swipe (ugly)
-if (!activated) || (!scrIsMobile()) exit;
+if (!activated || moving) || (!scrIsMobile()) exit;
 var _mx = mouse_x;
 var _my = mouse_y;
 var _m = point_direction(mx,my,_mx,_my);
