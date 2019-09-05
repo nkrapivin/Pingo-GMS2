@@ -1,4 +1,13 @@
 /// @description init
+if (file_exists("PingoSaveData/Pingo.sav"))
+{
+	show_debug_message("OLD SAVEDATA WAS FOUND! COPYING...");
+	file_copy("PingoSaveData/Pingo.sav","default/Pingo.sav");
+	file_delete("PingoSaveData/Pingo.sav");
+	directory_destroy("PingoSaveData");
+	show_debug_message("DONE COPYING SAVEDATA!");
+}
+
 global.loadid = -1;
 global.saveid = -1;
 global.loadbuff = -1;
@@ -22,5 +31,7 @@ for (var i = 1; i < 31; i++)
 	global.StarCount[1,i] = 0;
 	global.StarCount[2,i] = 0;
 }
+
+PerformEvent = true;
 
 scrLoad();

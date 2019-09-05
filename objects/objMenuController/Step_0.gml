@@ -20,15 +20,50 @@ if (move != 0)
 push = keyboard_check_pressed(vk_enter);
 if (push) event_user(0);
 
-if (keyboard_check_pressed(vk_anykey))
+if (scrIsMobile())
 {
-    if (keyboard_lastkey == code[code_pos])
-    {
-        code_pos++;
-        if (code_pos >= array_length_1d(code))
-        {
-            oAnimatedBg.image_index = 3;
-            code_pos = 0;
-        }
-    } else code_pos = 0;
+	//you can't just press keyboard keys on mobile.
+	if (mouse_check_button(mb_left) && !key_react)
+	{
+		touch_pos[1] = mouse_y;
+		touch_pos[0] = mouse_x;
+		if (mouse_check_button_pressed(mb_left))
+		{
+			mx = mouse_x;
+			my = mouse_y;	
+		}
+		else
+		{
+			var dif,length;
+			dif[1] = touch_pos[1] - my;
+			dif[0] = touch_pos[0] - mx;
+			length = sqrt( dif[0] * dif[0] + dif[1] * dif[1] );
+		
+			if (length > 60)
+			{
+				var angle = arctan2( dif[1], dif[0] );
+				if ( angle < -7 * pi / 8 || angle > 7 * pi / 8 )
+					keyboard_lastkey = vk_left;
+				else if ( angle < pi / 8 && angle > -pi / 8 )
+					keyboard_lastkey = vk_right;
+				else if ( angle < -3 * pi / 8 && angle > -5 * pi / 8 )
+					keyboard_lastkey = vk_up;
+				else if ( angle > 3 * pi / 8 && angle < 5 * pi / 8 )
+					keyboard_lastkey = vk_down;
+				
+				event_user(1);
+				key_react = true;
+				//free the arrays
+				touch_pos = 0;
+				dif = 0;
+			}
+		}
+	}
+	else if (!mouse_check_button(mb_left))
+	{
+		keyboard_lastkey = -1; key_react = false;
+	}
 }
+
+if (keyboard_check_pressed(vk_anykey))
+	event_user(1);

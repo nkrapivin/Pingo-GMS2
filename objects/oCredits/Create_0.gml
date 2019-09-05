@@ -50,6 +50,8 @@ TIP:
 try inputing the following button combination in the main menu:
 up, up, down, down, left, right, left, right, b, a.
 (works only on PC)
+or up, up, down, down, left, right, left, right
+(on mobile or html5)
 
 If you have encountered a bug in GameMaker Studio 2 version,
 then please contact:

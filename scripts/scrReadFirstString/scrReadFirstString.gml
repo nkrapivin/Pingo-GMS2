@@ -23,5 +23,4 @@ for (var i = argument0; i < string_length(argument1); i++)
 	}
 }
 
-show_debug_message(__return);
 return __return;

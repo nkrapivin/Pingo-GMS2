@@ -1,4 +1,5 @@
 /// @description Draw Level Name + Stars
+if (!loaded) exit;
 scrPatchHoles();
 draw_set_font(fntMainfont);
 draw_set_halign(fa_middle);
@@ -93,7 +94,7 @@ if (global.LevelComplete) || (global.LevelPaused)
 	}
 	else draw_sprite(sprSigns,0,231,26);
 	var push = keyboard_check(vk_enter);
-	var mpush = mouse_check_button(mb_left);
+	var mpush = mouse_check_button_pressed(mb_left);
 	if (point_in_rectangle(mouse_x,mouse_y,304,261,304+325,261+110))
 	{
 		lvlcomplete_selected = 1;

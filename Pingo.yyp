@@ -295,14 +295,6 @@
             }
         },
         {
-            "Key": "2acad86e-b780-4108-9050-3797fa8b8855",
-            "Value": {
-                "id": "ade36a61-ade7-409b-a80c-6cd212a8b6e1",
-                "resourcePath": "objects\\oLevelSelector\\oLevelSelector.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "2b7fb373-1ab5-478b-8523-c2188b7d87ae",
             "Value": {
                 "id": "1aab3386-f4e2-46b8-881d-0fa53370a26c",
@@ -487,6 +479,14 @@
             }
         },
         {
+            "Key": "46249c75-32e8-4cc0-a50d-1c6fcd87032e",
+            "Value": {
+                "id": "d1552246-7c41-420f-83c7-c5480e72c04d",
+                "resourcePath": "scripts\\scrAsyncLoadLevel\\scrAsyncLoadLevel.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "46e1823c-4076-4faf-9030-d62943cb9871",
             "Value": {
                 "id": "33afe3c5-259c-40fc-8eff-db1e301bfc09",
@@ -507,14 +507,6 @@
             "Value": {
                 "id": "170cbae8-ac44-4c26-8c46-455689968569",
                 "resourcePath": "sprites\\sprSigns\\sprSigns.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "4cbacb51-dd02-4093-96fd-940e86fa48d5",
-            "Value": {
-                "id": "5b535051-0bb4-4dd4-b8cd-562912246504",
-                "resourcePath": "sprites\\sprVKey\\sprVKey.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -554,7 +546,7 @@
             "Key": "502bbc9e-51a5-4011-bc86-7f34a08f1c1d",
             "Value": {
                 "id": "371bf488-1f6a-4852-aa17-459e2f954032",
-                "resourcePath": "rooms\\rLevelSelectNew\\rLevelSelectNew.yy",
+                "resourcePath": "rooms\\rLevelSelect\\rLevelSelect.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -1167,14 +1159,6 @@
             }
         },
         {
-            "Key": "b81ce5a4-87b5-47a3-a875-2d1fc7f9340f",
-            "Value": {
-                "id": "37f95bcd-f2c4-45cf-a69f-c77c1d11eae3",
-                "resourcePath": "sprites\\sprGoSign\\sprGoSign.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "bca087b6-4695-4c0e-923f-6f74ac8f46be",
             "Value": {
                 "id": "39a9ff1a-359f-4edc-99cb-21855d6b318f",
@@ -1255,6 +1239,14 @@
             }
         },
         {
+            "Key": "ce2d50e2-b870-4a6f-9cb7-934c3f0aa019",
+            "Value": {
+                "id": "028a6e94-c60a-48d7-8245-fd7363e79203",
+                "resourcePath": "extensions\\file_ensure_ext\\file_ensure_ext.yy",
+                "resourceType": "GMExtension"
+            }
+        },
+        {
             "Key": "ce531beb-bb45-4b60-80b9-5d28fc44d383",
             "Value": {
                 "id": "5cbc8d83-1297-4310-9db5-731d08019d3e",
@@ -1284,14 +1276,6 @@
                 "id": "932fffb6-cc26-457a-893f-a8dd0cb5c076",
                 "resourcePath": "datafiles_yy\\levels\\World2\\level007.txt.yy",
                 "resourceType": "GMIncludedFile"
-            }
-        },
-        {
-            "Key": "d46cdfd5-7c76-4852-90ac-4caab4c3fa80",
-            "Value": {
-                "id": "f421aad2-7608-4258-80b2-056a12309586",
-                "resourcePath": "views\\d46cdfd5-7c76-4852-90ac-4caab4c3fa80.yy",
-                "resourceType": "GMFolder"
             }
         },
         {
@@ -1503,14 +1487,6 @@
             }
         },
         {
-            "Key": "f37a8d29-a957-4195-b7f1-18b13a7f38b3",
-            "Value": {
-                "id": "2b57ecbf-e5af-40d9-af6d-18f24b161bd4",
-                "resourcePath": "rooms\\rLevelSelect\\rLevelSelect.yy",
-                "resourceType": "GMRoom"
-            }
-        },
-        {
             "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
             "Value": {
                 "id": "35f7e253-0ca7-4029-9cb1-bf420a368ec0",
@@ -1575,14 +1551,6 @@
             }
         },
         {
-            "Key": "faf08a50-f4f7-4b8e-9d11-fe743e5d6790",
-            "Value": {
-                "id": "b4d9e1a6-74f6-43ca-9d87-c03712dd95fd",
-                "resourcePath": "objects\\oGoButton\\oGoButton.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "fb1f8bda-6aa2-4fc7-a73d-46667677dbb3",
             "Value": {
                 "id": "cf0ae34d-7a84-42d4-8359-79c125349247",
@@ -1618,6 +1586,7 @@
         "2cbbbb30-f294-4fa9-bc81-0bb7f0b6af58",
         "3bdc81a4-2ffa-4b54-bfa4-83c87ea63409",
         "b01191c8-c881-440f-a953-872ea0c3b401",
+        "46249c75-32e8-4cc0-a50d-1c6fcd87032e",
         "24c1dd1e-11a5-49d9-9eae-4f7457442610",
         "d79bf519-ccf2-4acb-b0ca-39caeb360e74",
         "ec39c2d9-88c5-45cf-9ee5-6e698e521be2",

@@ -8,8 +8,7 @@
         "63e9a17f-d8ef-46d6-b128-4a3b68b2dcc6",
         "0da6e0e3-2319-483f-aed2-a8c17dd3e5ae",
         "d5824cdd-5ce1-4b9b-a6b9-9f028ae8fa81",
-        "5f37e885-e63c-4a32-9d07-a9d846f0399b",
-        "b81ce5a4-87b5-47a3-a875-2d1fc7f9340f"
+        "5f37e885-e63c-4a32-9d07-a9d846f0399b"
     ],
     "filterType": "GMSprite",
     "folderName": "level select stuff",

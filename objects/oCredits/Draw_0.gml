@@ -1,5 +1,8 @@
 /// @description draw text
 draw_text(x,y,str);
-if (mouse_check_button_pressed(mb_right)) show_message(string(y));
 y -= 0.5;
-if (y < -950) game_end();
+if (y < -1010)
+{
+	audio_stop_sound(sndCreditsBgm);
+	room_goto(rMenu);
+}

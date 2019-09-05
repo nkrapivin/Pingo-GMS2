@@ -39,8 +39,10 @@ else
 	else
 	{
 		if (!scrIsMobile())
-			draw_text(960/2,544/2,"No custom levels were found.");
-		else
+			draw_text(960/2,544/2,"No custom levels were found.\nYou can drop them to:\nGame Folder\\custom_levels");
+		else if (os_browser != browser_not_a_browser) //is HTML5
+			draw_text(960/2,544/2,"Custom Levels aren't supported on HTML5.\nSorry about that!\nJust click left trigger.");
+		else if (scrIsMobile())
 			draw_text(960/2,544/2,"Custom Levels aren't supported on mobile.\nSorry about that!\nJust click left trigger.");
 	}
 }

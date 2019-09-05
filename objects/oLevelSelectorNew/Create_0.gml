@@ -8,7 +8,12 @@ for (var i = 1; i < 31; i++)
 {
 	allstarcount += global.StarCount[selectedWorld,i];
 }
-
+if (os_browser != browser_not_a_browser)
+{
+	file = "";
+	selfile = 0;
+	exit;
+}
 file = "";
 selfile = 0;
 if (directory_exists(working_directory + "custom_levels"))
