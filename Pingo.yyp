@@ -1239,14 +1239,6 @@
             }
         },
         {
-            "Key": "ce2d50e2-b870-4a6f-9cb7-934c3f0aa019",
-            "Value": {
-                "id": "028a6e94-c60a-48d7-8245-fd7363e79203",
-                "resourcePath": "extensions\\file_ensure_ext\\file_ensure_ext.yy",
-                "resourceType": "GMExtension"
-            }
-        },
-        {
             "Key": "ce531beb-bb45-4b60-80b9-5d28fc44d383",
             "Value": {
                 "id": "5cbc8d83-1297-4310-9db5-731d08019d3e",

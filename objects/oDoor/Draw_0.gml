@@ -3,7 +3,7 @@ curworld = oLevelSelectorNew.selectedWorld;
 unlocked = global.UnlockedLevels[curworld,doorind];
 var sw = sprite_width*image_xscale;
 var sh = sprite_height*image_yscale;
-if (oLevelSelectorNew.selecteddoor == doorind)
+if (selected)
 {
 	y = ystart + sin(current_time/700)*5;
 } else y = ystart;
