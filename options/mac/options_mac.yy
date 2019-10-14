@@ -26,12 +26,12 @@
     "option_mac_splash_png": "${options_dir}\\mac\\splash\\splash.png",
     "option_mac_start_fullscreen": false,
     "option_mac_team_id": "",
-    "option_mac_texture_page": "4096x4096",
+    "option_mac_texture_page": "2048x2048",
     "option_mac_version": {
         "build": 0,
         "major": 1,
         "minor": 3,
         "revision": 0
     },
-    "option_mac_vsync": false
+    "option_mac_vsync": true
 }
