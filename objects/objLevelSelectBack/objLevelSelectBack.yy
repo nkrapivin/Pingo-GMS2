@@ -5,23 +5,13 @@
     "name": "objLevelSelectBack",
     "eventList": [
         {
-            "id": "2f6f44a0-c14f-47d9-8f92-1683dbe15df7",
+            "id": "9e05633f-5987-4bd8-b381-dce05f42ca2c",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 7,
-            "eventtype": 6,
-            "m_owner": "aa135116-eb90-4023-aa07-62d2f7f76ce8"
-        },
-        {
-            "id": "1c3edf84-fe18-4b45-9e70-85c84b435ea8",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 27,
-            "eventtype": 9,
+            "enumb": 0,
+            "eventtype": 3,
             "m_owner": "aa135116-eb90-4023-aa07-62d2f7f76ce8"
         }
     ],

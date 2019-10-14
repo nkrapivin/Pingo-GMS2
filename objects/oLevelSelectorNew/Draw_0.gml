@@ -43,7 +43,7 @@ else
 		else if (os_browser != browser_not_a_browser) //is HTML5
 			draw_text(960/2,544/2,"Custom Levels aren't supported on HTML5.\nSorry about that!\nJust click left trigger.");
 		else if (scrIsMobile())
-			draw_text(960/2,544/2,"Custom Levels aren't supported on mobile.\nSorry about that!\nJust click left trigger.");
+			draw_text(960/2,544/2,"No custom levels were found.\nPress 'Back' button to save your level.\nIf you saved your level but still don't see it\nTry re-opening this menu.");
 	}
 }
 
@@ -62,10 +62,15 @@ else if (mpush && point_in_rectangle(mouse_x,mouse_y,960/2+180,55,(960/2+180)+75
 }
 
 var move = 0;
+var gmove = 0;
 move = keyboard_check_pressed(vk_right) - keyboard_check_pressed(vk_left);
-if (move != 0)
+gmove = gamepad_button_check_pressed(global.gp_id,gp_shoulderr) - gamepad_button_check_pressed(global.gp_id,gp_shoulderl);
+if (move != 0) var cur_move = move;
+else if (gmove != 0) var cur_move = gmove;
+else var cur_move = 0;
+if (cur_move != 0)
 {
-	selectedWorld = max(1,selectedWorld+move);
+	selectedWorld = max(1,selectedWorld+cur_move);
 	if (selectedWorld == 3)
 	{
 		instance_deactivate_object(oDoor);
@@ -87,7 +92,7 @@ if (move != 0)
 	}
 }
 
-if (keyboard_check(vk_left))
+if (keyboard_check(vk_left) || gamepad_button_check(global.gp_id,gp_shoulderl))
 {
 	draw_sprite(sprTriggers,0,960/2-250,downPos);
 }
@@ -96,7 +101,7 @@ else
 	draw_sprite(sprTriggers,0,960/2-250,upPos);
 }
 
-if (keyboard_check(vk_right))
+if (keyboard_check(vk_right) || gamepad_button_check(global.gp_id,gp_shoulderr))
 {
 	draw_sprite(sprTriggers,1,960/2+180,downPos);
 }
@@ -113,3 +118,8 @@ if (selectedWorld != 3)
 	var starstr = string(allstarcount);
 	draw_text(960-40,15,starstr+"/90");
 }
+
+if (global.gp_id == -1) exit;
+global.mousex += gamepad_axis_value(global.gp_id,gp_axislh) * 4;
+global.mousey += gamepad_axis_value(global.gp_id,gp_axislv) * 4;
+draw_sprite(sprBall,0,global.mousex,global.mousey);

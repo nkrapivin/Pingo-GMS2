@@ -6,3 +6,6 @@ if (selectedWorld == 3)
 	audio_stop_sound(sndMenuBgm);
 	room_goto(rGame);
 }
+else
+	with (oDoor)
+		if (selected) event_perform(ev_mouse,ev_left_press); //At least something.

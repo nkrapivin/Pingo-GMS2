@@ -1,5 +1,5 @@
 /// @description init
-audio_stop_all();
+audio_group_stop_all(ag_bgm);
 audio_play_sound(sndCreditsBgm,0,true);
 x = room_width/2;
 draw_set_font(fntMainfont);

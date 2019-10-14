@@ -3,6 +3,7 @@
     "modelName": "GMiOSOptions",
     "mvc": "1.0",
     "name": "iOS",
+    "option_ios_apple_sign_in": false,
     "option_ios_bundle_name": "com.grzybojad.pingo",
     "option_ios_defer_home_indicator": false,
     "option_ios_devices": 2,
@@ -68,7 +69,7 @@
     "option_ios_version": {
         "build": 0,
         "major": 1,
-        "minor": 2,
+        "minor": 3,
         "revision": 0
     }
 }

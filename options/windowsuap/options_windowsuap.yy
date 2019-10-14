@@ -6,6 +6,7 @@
     "option_windowsuap_allow_fullscreen_switching": false,
     "option_windowsuap_certificate_location": "${base_options_dir}\\windowsuap\\keys\\WinUWPRunner_TemporaryKey.pfx",
     "option_windowsuap_certificate_publishername": "CN=Sandbox",
+    "option_windowsuap_description": "Pingo is a game where you need to fill all floor tiles in as least steps as possible.",
     "option_windowsuap_display_cursor": true,
     "option_windowsuap_display_name": "Pingo",
     "option_windowsuap_iap_sandbox": false,
@@ -16,7 +17,7 @@
     "option_windowsuap_logo_background_colour": {
         "Value": 4280091419
     },
-    "option_windowsuap_logo_foreground_text": 1,
+    "option_windowsuap_logo_foreground_text": 0,
     "option_windowsuap_microphone_capable": false,
     "option_windowsuap_native_cpu": 0,
     "option_windowsuap_orient_landscape": true,
@@ -42,12 +43,12 @@
     "option_windowsuap_version": {
         "build": 0,
         "major": 1,
-        "minor": 2,
+        "minor": 3,
         "revision": 0
     },
     "option_windowsuap_wide_logo": "${options_dir}\\windowsuap\\logos\\WideLogo.scale-100.png",
     "option_windowsuap_xbox_live": false,
     "option_windowsuap_xbox_live_creators_program": false,
-    "option_windowsuap_xbox_live_scid": null,
+    "option_windowsuap_xbox_live_scid": "",
     "option_windowsuap_xbox_live_title_id": 0
 }

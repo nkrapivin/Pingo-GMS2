@@ -4,6 +4,8 @@ upPos = 45;
 downPos = 55;
 selecteddoor = 1;
 allstarcount = 0;
+global.mousex = 0;
+global.mousey = 0;
 for (var i = 1; i < 31; i++)
 {
 	allstarcount += global.StarCount[selectedWorld,i];

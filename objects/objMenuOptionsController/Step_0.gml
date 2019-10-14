@@ -1,10 +1,20 @@
 /// @description options menu
 
+if (gamepad_axis_value(global.gp_id,gp_axislv) < 0.5) && (gamepad_axis_value(global.gp_id,gp_axislv) > -0.5)
+	gp_timer = 0;
+	
+if (gamepad_axis_value(global.gp_id,gp_axislh) < 0.5) && (gamepad_axis_value(global.gp_id,gp_axislh) > -0.5)
+	gp_timer2 = 0;
+	
+if (gp_timer > 0) gp_timer--;
+if (gp_timer2 > 0) gp_timer2--;
+
 var move = 0;
-move += keyboard_check_pressed(vk_down);
-move -= keyboard_check_pressed(vk_up);
+move += keyboard_check_pressed(vk_down) || gamepad_button_check_pressed(global.gp_id,gp_padd) || gp_timer < 1 && gamepad_axis_value(global.gp_id,gp_axislv) > 0.5;
+move -= keyboard_check_pressed(vk_up) || gamepad_button_check_pressed(global.gp_id,gp_padu) || gp_timer < 1 && gamepad_axis_value(global.gp_id,gp_axislv) < -0.5;
 if (move != 0)
 {
+	gp_timer = 10;
 	selected_btn += move;
 	if (selected_btn > 2) selected_btn = 1;
 	if (selected_btn < 1) selected_btn = 2;
@@ -35,16 +45,22 @@ else if (point_in_rectangle(mouse_x,mouse_y,
 	selected_btn = 2;
 }
 
-var push = keyboard_check_pressed(vk_escape);
+var push = keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(global.gp_id,gp_face2);
 if (push) event_user(0);
 
 var smove = 0;
+var gmove = 0;
 var smove = keyboard_check_pressed(vk_right) - keyboard_check_pressed(vk_left);
-if (smove != 0)
+var gmove = gamepad_button_check_pressed(global.gp_id,gp_padr) - gamepad_button_check_pressed(global.gp_id,gp_padl);
+if (smove != 0) var cur_move = smove;
+else if (gmove != 0) var cur_move = gmove;
+else var cur_move = 0;
+if (cur_move != 0)
 {
+	gp_timer2 = 10;
 	if (selected_btn == 1)
 	{
-		global.SndGain+=smove;
+		global.SndGain+=cur_move;
 		if (global.SndGain > 10) global.SndGain = 10;
 		if (global.SndGain < 0) global.SndGain = 0;
 		var val = scr10th(global.SndGain);
@@ -52,7 +68,7 @@ if (smove != 0)
 	}
 	if (selected_btn == 2)
 	{
-		global.BgmGain+=smove;
+		global.BgmGain+=cur_move;
 		if (global.BgmGain > 10) global.BgmGain = 10;
 		if (global.BgmGain < 0) global.BgmGain = 0;
 		var val = scr10th(global.BgmGain);

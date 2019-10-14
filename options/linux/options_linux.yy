@@ -24,7 +24,7 @@
     "option_linux_version": {
         "build": 0,
         "major": 1,
-        "minor": 2,
+        "minor": 3,
         "revision": 0
     }
 }

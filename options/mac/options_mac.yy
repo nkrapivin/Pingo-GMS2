@@ -8,6 +8,7 @@
     "option_mac_allow_outgoing_network": true,
     "option_mac_app_category": "Games",
     "option_mac_app_id": "com.grzybojad.pingo",
+    "option_mac_apple_sign_in": false,
     "option_mac_build_app_store": false,
     "option_mac_copyright": "(c) 2019 Grzybojad",
     "option_mac_disable_sandbox": false,
@@ -29,7 +30,7 @@
     "option_mac_version": {
         "build": 0,
         "major": 1,
-        "minor": 2,
+        "minor": 3,
         "revision": 0
     },
     "option_mac_vsync": false

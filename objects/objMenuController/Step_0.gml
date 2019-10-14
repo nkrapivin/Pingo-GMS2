@@ -1,11 +1,16 @@
 /// @description Move menu
 if (audio_group_is_loaded(ag_bgm) && !audio_is_playing(sndMenuBgm)) audio_play_sound(sndMenuBgm,0,true);
 
+if (gamepad_axis_value(global.gp_id,gp_axislv) < 0.5) && (gamepad_axis_value(global.gp_id,gp_axislv) > -0.5)
+	gp_timer = 0;
+if (gp_timer > 0) gp_timer--;
+
 var move = 0;
-move += keyboard_check_pressed(vk_down);
-move -= keyboard_check_pressed(vk_up);
+move += keyboard_check_pressed(vk_down) || gamepad_button_check_pressed(global.gp_id,gp_padd) || gp_timer < 1 && gamepad_axis_value(global.gp_id,gp_axislv) > 0.5;
+move -= keyboard_check_pressed(vk_up) || gamepad_button_check_pressed(global.gp_id,gp_padu) || gp_timer < 1 && gamepad_axis_value(global.gp_id,gp_axislv) < -0.5;
 if (move != 0)
 {
+	gp_timer = 10;
 	selected_btn += move;
 	if (selected_btn > 3) selected_btn = 1;
 	if (selected_btn < 1) selected_btn = 3;
@@ -17,7 +22,7 @@ if (move != 0)
 	}
 }
 
-push = keyboard_check_pressed(vk_enter);
+push = keyboard_check_pressed(vk_enter) || gamepad_button_check_pressed(global.gp_id,gp_face1) || gamepad_button_check_pressed(global.gp_id,gp_start);
 if (push) event_user(0);
 
 if (scrIsMobile())
@@ -67,3 +72,5 @@ if (scrIsMobile())
 
 if (keyboard_check_pressed(vk_anykey))
 	event_user(1);
+	
+if (keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(global.gp_id,gp_select)) game_end();

@@ -47,13 +47,13 @@ else
 		draw_sprite_ext(sprStar,0,10 + (2 * 20),60,0.25,0.25,0,c_black,0.5);
 	}
 
-	if (!global.LevelComplete) && (keyboard_check_released(vk_escape))
+	if (!global.LevelComplete) && (gamepad_button_check_pressed(global.gp_id,gp_start) || keyboard_check_released(vk_escape))
 	{
 		oBall.activated = false;
 		global.LevelPaused = !global.LevelPaused;
 	}
 
-	if (!global.LevelComplete) && (!global.LevelPaused) && (keyboard_check_pressed(ord("R")))
+	if (!global.LevelComplete) && (!global.LevelPaused) && (gamepad_button_check_pressed(global.gp_id,gp_face4) || keyboard_check_pressed(ord("R")))
 	room_restart();
 
 	//level complete screen
@@ -66,11 +66,17 @@ else
 			draw_rectangle(0,0,room_width,room_height,false);
 			draw_set_alpha(1);
 		}
+		
+		if (gamepad_axis_value(global.gp_id,gp_axislv) < 0.5) && (gamepad_axis_value(global.gp_id,gp_axislv) > -0.5)
+			gp_timer = 0;
+		if (gp_timer > 0) gp_timer--;
+		
 		var move = 0;
-		move += keyboard_check_pressed(vk_down);
-		move -= keyboard_check_pressed(vk_up);
+		move += keyboard_check_pressed(vk_down) || gamepad_button_check_pressed(global.gp_id,gp_padd) || gp_timer < 1 && gamepad_axis_value(global.gp_id,gp_axislv) > 0.5;
+		move -= keyboard_check_pressed(vk_up) || gamepad_button_check_pressed(global.gp_id,gp_padu) || gp_timer < 1 && gamepad_axis_value(global.gp_id,gp_axislv) < -0.5;
 		if (move != 0)
 		{
+			gp_timer = 10;
 			lvlcomplete_selected += move;
 			if (lvlcomplete_selected > 3) lvlcomplete_selected = 1;
 			if (lvlcomplete_selected < 1) lvlcomplete_selected = 3;
@@ -98,7 +104,7 @@ else
 			}
 		}
 		else draw_sprite(sprSigns,0,231,26);
-		var push = keyboard_check(vk_enter);
+		var push = keyboard_check(vk_enter) || gamepad_button_check_pressed(global.gp_id,gp_face1);
 		var mpush = mouse_check_button_pressed(mb_left);
 		if (point_in_rectangle(mouse_x,mouse_y,304,261,304+325,261+110))
 		{
@@ -150,20 +156,24 @@ else
 							{
 								global.CurrentLevel = 1;
 								global.CurrentWorld++;
-								audio_stop_sound(sndWorld1Bgm);
+								audio_group_stop_all(ag_bgm);
 							}
 							var credits = false;
-							if (global.CurrentWorld == 3) //credits (not yet)
+							if (global.CurrentWorld == 3) //if you completed world 2, go to credits room
 							{
 								var credits = true;
 							}
 							global.UnlockedLevels[global.CurrentWorld,global.CurrentLevel] = true;
+							
+							//unlock & save.
+							scrSave();
+							
 							if (!credits) room_restart();
 							else room_goto(rCredits);
 						}
 						else
 						{
-							audio_stop_sound(sndWorld1Bgm);
+							audio_group_stop_all(ag_bgm);
 							room_goto(rMenu);
 						}
 					}
@@ -181,12 +191,7 @@ else
 				}
 				case 3:
 				{
-				
-					if (global.CurrentWorld != 999) scrSave();
-					audio_stop_sound(sndWorld1Bgm);
-					audio_stop_sound(sndWorld2Bgm);
-					audio_stop_sound(sndWorld2Bgm2);
-					audio_stop_sound(sndWorld2Bgm3);
+					audio_group_stop_all(ag_bgm);
 					room_goto(rMenu);
 					break;
 				}

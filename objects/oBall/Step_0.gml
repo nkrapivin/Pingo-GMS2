@@ -1,10 +1,19 @@
 /// @description Main Player
 if (!activated) exit;
 
-key_left = keyboard_check_pressed(vk_left);
-key_right = keyboard_check_pressed(vk_right);
-key_up = keyboard_check_pressed(vk_up);
-key_down = keyboard_check_pressed(vk_down);
+if (gamepad_axis_value(global.gp_id,gp_axislv) < 0.5) && (gamepad_axis_value(global.gp_id,gp_axislv) > -0.5)
+	gp_timery = 0;
+	
+if (gamepad_axis_value(global.gp_id,gp_axislh) < 0.5) && (gamepad_axis_value(global.gp_id,gp_axislh) > -0.5)
+	gp_timerx = 0;
+	
+if (gp_timery > 0) gp_timery--;
+if (gp_timerx > 0) gp_timerx--;
+
+key_left = keyboard_check_pressed(vk_left) || gamepad_button_check_pressed(global.gp_id,gp_padl) || gp_timerx < 1 && gamepad_axis_value(global.gp_id,gp_axislh) < -0.5;
+key_right = keyboard_check_pressed(vk_right) || gamepad_button_check_pressed(global.gp_id,gp_padr) || gp_timerx < 1 && gamepad_axis_value(global.gp_id,gp_axislh) > 0.5;
+key_up = keyboard_check_pressed(vk_up) || gamepad_button_check_pressed(global.gp_id,gp_padu) || gp_timery < 1 && gamepad_axis_value(global.gp_id,gp_axislv) < -0.5;
+key_down = keyboard_check_pressed(vk_down) || gamepad_button_check_pressed(global.gp_id,gp_padd) || gp_timery < 1 && gamepad_axis_value(global.gp_id,gp_axislv) > 0.5;
 
 if (mouse_check_button(mb_left) && !moving && scrIsMobile())
 {
@@ -45,6 +54,8 @@ var moveh = key_right - key_left;
 var movev = key_down - key_up;
 if (!moving) && ((moveh != 0) || (movev != 0))
 {
+	gp_timerx = 10;
+	gp_timery = 10;
 	if (place_meeting(x+moveh,y,oWall) || place_meeting(x,y+movev,oWall)) exit;
 	scrIncrementStep();
 	moving = true;

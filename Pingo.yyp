@@ -375,6 +375,14 @@
             }
         },
         {
+            "Key": "3a5af38c-757d-41ae-98c0-5d4b09e14e6a",
+            "Value": {
+                "id": "822dfe7f-8f6e-4b73-b301-b33679eba16c",
+                "resourcePath": "options\\switch\\options_switch.yy",
+                "resourceType": "GMSwitchOptions"
+            }
+        },
+        {
             "Key": "3a5af38c-757d-44ae-98c0-5d4b09e14e6a",
             "Value": {
                 "id": "fb673e94-61d7-44fe-9226-22f4cd872f1c",
@@ -572,6 +580,14 @@
                 "id": "be80a062-5d7e-4ad7-8415-e304d6609e3d",
                 "resourcePath": "datafiles_yy\\levels\\World2\\level003.txt.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "5801d10d-1de9-40e5-b9ee-7d6622b5c7b0",
+            "Value": {
+                "id": "daef7fef-fb45-405a-8602-ada52d2194b1",
+                "resourcePath": "objects\\oGamepadHandler\\oGamepadHandler.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -951,6 +967,14 @@
             }
         },
         {
+            "Key": "93566aad-c3b3-48a9-8fa7-9c5ee19f74ac",
+            "Value": {
+                "id": "f852ec31-04f3-437d-93bd-b983ac0066a2",
+                "resourcePath": "options\\tvos\\options_tvos.yy",
+                "resourceType": "GMtvOSOptions"
+            }
+        },
+        {
             "Key": "948e9251-50bd-4492-b71c-d6931573c4ac",
             "Value": {
                 "id": "34c70175-dfe4-4afe-82fd-79f7a1aa8870",
@@ -1015,6 +1039,14 @@
             }
         },
         {
+            "Key": "a128950b-5063-4876-b4a6-b99dbd2ea6d1",
+            "Value": {
+                "id": "2a80781d-e74f-4113-afca-6528c8f172bb",
+                "resourcePath": "options\\amazonfire\\options_amazonfire.yy",
+                "resourceType": "GMAmazonFireOptions"
+            }
+        },
+        {
             "Key": "a1c730c9-fb28-41b3-ad08-48eee4ab7646",
             "Value": {
                 "id": "fa637f8b-3823-4321-9f6e-94ce349ac949",
@@ -1052,14 +1084,6 @@
                 "id": "0162c564-0ce1-41c3-b26c-4e64d9382d60",
                 "resourcePath": "objects\\oSaveSystem\\oSaveSystem.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "a8ef8f58-6253-4dd5-af6f-609e713364a0",
-            "Value": {
-                "id": "c9ae11e3-37b1-46a9-a7c2-1f9a48f84349",
-                "resourcePath": "sprites\\sprPorterFace\\sprPorterFace.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
@@ -1148,6 +1172,14 @@
                 "id": "9e52bfe7-f72b-4116-ac96-89aa7e7fcddb",
                 "resourcePath": "views\\b59afe20-58c6-46b9-ae07-e4fcc36f9951.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b7a26fca-a771-4d1c-873c-8779a51983c1",
+            "Value": {
+                "id": "8bbbd9ad-b17e-454a-81f6-226ccf4a64ab",
+                "resourcePath": "scripts\\scrInitializeLevel\\scrInitializeLevel.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1423,6 +1455,14 @@
             }
         },
         {
+            "Key": "ea6dfccf-f2f0-4103-be2b-7ebb5419592a",
+            "Value": {
+                "id": "a7bf5420-4908-4cd9-86b9-15a3e23cb2b2",
+                "resourcePath": "scripts\\scrWriteLevel\\scrWriteLevel.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "eab442f3-7a74-4379-bd89-8282501cfab4",
             "Value": {
                 "id": "7866be83-5f4d-49d5-be58-4eee20dba6e5",
@@ -1583,7 +1623,9 @@
         "d79bf519-ccf2-4acb-b0ca-39caeb360e74",
         "ec39c2d9-88c5-45cf-9ee5-6e698e521be2",
         "8dd468ff-05da-4a1c-aa21-a22adb562944",
-        "6f4f1bd0-625b-4777-99d9-454381ed8f01"
+        "6f4f1bd0-625b-4777-99d9-454381ed8f01",
+        "b7a26fca-a771-4d1c-873c-8779a51983c1",
+        "ea6dfccf-f2f0-4103-be2b-7ebb5419592a"
     ],
     "tutorial": ""
 }
