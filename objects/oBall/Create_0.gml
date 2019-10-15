@@ -7,3 +7,4 @@ mx = -1;
 my = -1;
 gp_timerx = 0;
 gp_timery = 0;
+stoptimer = 0;

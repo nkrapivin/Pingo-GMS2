@@ -41,7 +41,7 @@
     "option_windowsuap_texture_page": "2048x2048",
     "option_windowsuap_use_synchronization": true,
     "option_windowsuap_version": {
-        "build": 0,
+        "build": 1,
         "major": 1,
         "minor": 3,
         "revision": 0

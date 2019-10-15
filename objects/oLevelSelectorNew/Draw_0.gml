@@ -43,7 +43,7 @@ else
 		else if (os_browser != browser_not_a_browser) //is HTML5
 			draw_text(960/2,544/2,"Custom Levels aren't supported on HTML5.\nSorry about that!\nJust click left trigger.");
 		else if (scrIsMobile())
-			draw_text(960/2,544/2,"No custom levels were found.\nPress 'Back' button to save your level.\nIf you saved your level but still don't see it\nTry re-opening this menu.");
+			draw_text(960/2,544/2,"Mobile platforms do not support custom levels.");
 	}
 }
 

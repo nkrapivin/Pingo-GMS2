@@ -22,13 +22,13 @@
     "option_mac_output_dir": "~\/GameMakerStudio2\/Mac",
     "option_mac_resize_window": false,
     "option_mac_scale": 0,
-    "option_mac_signing_identity": "Developer ID Application:4Z9GV9MF5L",
+    "option_mac_signing_identity": "Mac Developer: linuxstorage@yandex.ru (JJAW3Y7D9V)",
     "option_mac_splash_png": "${options_dir}\\mac\\splash\\splash.png",
     "option_mac_start_fullscreen": false,
     "option_mac_team_id": "",
     "option_mac_texture_page": "2048x2048",
     "option_mac_version": {
-        "build": 0,
+        "build": 1,
         "major": 1,
         "minor": 3,
         "revision": 0

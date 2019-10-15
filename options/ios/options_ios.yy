@@ -29,7 +29,7 @@
     "option_ios_icon_iphone_spotlight_120": "${options_dir}\\ios\\icons\\spotlight\\iphone_120.png",
     "option_ios_icon_iphone_spotlight_80": "${options_dir}\\ios\\icons\\spotlight\\iphone_80.png",
     "option_ios_icon_itunes_artwork_1024": "${options_dir}\\ios\\icons\\itunes\\itunes_1024.png",
-    "option_ios_interpolate_pixels": false,
+    "option_ios_interpolate_pixels": true,
     "option_ios_orientation_landscape": true,
     "option_ios_orientation_landscape_flipped": true,
     "option_ios_orientation_portrait": true,
@@ -64,10 +64,10 @@
     "option_ios_splashscreen_iphone_xs_max_landscape": "${options_dir}\\ios\\splash\\iphone_xs_max_landscape.png",
     "option_ios_splashscreen_iphone_xs_max_portrait": "${base_options_dir}\\ios\\splash\\iphone_xs_max_portrait.png",
     "option_ios_team_id": "",
-    "option_ios_texture_page": "4096x4096",
+    "option_ios_texture_page": "2048x2048",
     "option_ios_use_facebook": false,
     "option_ios_version": {
-        "build": 0,
+        "build": 1,
         "major": 1,
         "minor": 3,
         "revision": 0

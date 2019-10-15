@@ -15,7 +15,9 @@ key_right = keyboard_check_pressed(vk_right) || gamepad_button_check_pressed(glo
 key_up = keyboard_check_pressed(vk_up) || gamepad_button_check_pressed(global.gp_id,gp_padu) || gp_timery < 1 && gamepad_axis_value(global.gp_id,gp_axislv) < -0.5;
 key_down = keyboard_check_pressed(vk_down) || gamepad_button_check_pressed(global.gp_id,gp_padd) || gp_timery < 1 && gamepad_axis_value(global.gp_id,gp_axislv) > 0.5;
 
-if (mouse_check_button(mb_left) && !moving && scrIsMobile())
+stoptimer = max(0,stoptimer-1);
+
+if (mouse_check_button(mb_left) && stoptimer == 0 && !moving && scrIsMobile())
 {
 	touch_pos[1] = mouse_y;
 	touch_pos[0] = mouse_x;
